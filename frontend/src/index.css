@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #1e293b;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3,h4,h5,h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500 hover:bg-brand-600
+           text-white text-sm font-semibold rounded-lg transition-colors
+           focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 border border-brand-500
+           text-brand-600 hover:bg-brand-50 text-sm font-semibold rounded-lg transition-colors
+           focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 text-slate-600 hover:text-brand-600
+           hover:bg-brand-50 text-sm font-medium rounded-lg transition-colors;
+  }
+
+  /* Cards */
+  @layer components {
+  .card {
+    @apply bg-white border border-slate-200 rounded-xl shadow-sm
+           hover:shadow-md hover:border-brand-200 transition-all duration-200;
+  }
+}
+
+  /* Inputs */
+  .form-input {
+    @apply w-full px-3.5 py-2.5 border border-slate-300 rounded-lg bg-white
+           text-slate-800 placeholder-slate-400 text-sm
+           focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100
+           transition-colors;
+  }
+  .form-input-dark { @apply form-input; }
+  .form-label {
+    @apply block text-sm font-medium text-slate-700 mb-1;
+  }
+  .form-label-dark { @apply form-label; }
+
+  /* Section helpers */
+  .section-label {
+    @apply inline-block text-xs font-bold text-brand-600 uppercase tracking-widest mb-2;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-slate-900 leading-tight;
+  }
+  .section-sub {
+    @apply text-base text-slate-500 leading-relaxed max-w-2xl;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+  .badge-blue  { @apply badge bg-brand-100 text-brand-700; }
+  .badge-green { @apply badge bg-accent-100 text-accent-600; }
+  .badge-gray  { @apply badge bg-slate-100 text-slate-600; }
+}
+
+@layer utilities {
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #f8fafc; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
