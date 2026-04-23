@@ -6,7 +6,7 @@ import { Briefcase, MapPin, Clock, ChevronDown, ChevronUp, Loader2, Users, Brain
 import { jobAPI } from '../services/api'
 import { PageHero, LoadingSpinner, EmptyState, CTABanner } from '../components/ui/index.jsx'
 import FileUploader from '../components/ui/FileUploader'
-
+import Careers from '../assates/career.png'
 const perks = [
   { icon: Brain, title: 'Cutting-Edge GIS Work', desc: 'Work on India\'s most complex geospatial projects — from satellite analytics to GeoAI.' },
   { icon: Rocket, title: 'Fast-Growing Team', desc: 'Join a team that has doubled in size and capability over the last 3 years.' },
@@ -157,6 +157,7 @@ export default function CareersPage() {
       </Helmet>
 
       <PageHero
+      img={Careers}
         label="Careers"
         title="Build India's geospatial future"
         subtitle="Join a team that works on some of India's most impactful GIS projects — from smart cities to agricultural intelligence."

@@ -9,7 +9,7 @@ import {
   EmptyState,
   CTABanner,
 } from "../components/ui/index.jsx";
-
+import Project from '../assates/project.png';
 const cats = [
   { value: "", label: "All" },
   { value: "web-gis", label: "Web GIS" },
@@ -50,6 +50,7 @@ export default function ProjectsPage() {
         <title>Projects — Digital Indian</title>
       </Helmet>
       <PageHero
+      img={Project}
         label="Projects"
         title="Our work"
         subtitle="Delivered geospatial projects across government, infrastructure, agriculture, and environment."

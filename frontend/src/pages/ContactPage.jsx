@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async'
 import { MapPin, Mail, Phone, Clock } from 'lucide-react'
 import { PageHero } from '../components/ui/index.jsx'
 import EnquiryForm from '../components/forms/EnquiryForm'
-
+import ContactImg from '../assates/contact.png'
 export default function ContactPage() {
   return (
     <>
@@ -10,6 +10,7 @@ export default function ContactPage() {
       <PageHero label="Contact" title="Let's work together"
         subtitle="Tell us about your geospatial challenge and we'll respond within 1–2 business days."
         breadcrumb={[{ label: 'Home', to: '/' }, { label: 'Contact' }]}
+        img={ContactImg}
       />
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

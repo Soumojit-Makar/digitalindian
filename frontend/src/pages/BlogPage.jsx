@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { FileText } from 'lucide-react'
 import { blogAPI } from '../services/api'
 import { PageHero, BlogCard, LoadingSpinner, EmptyState, CTABanner } from '../components/ui/index.jsx'
-
+import Blog from '../assates/blog.png'
 const categories = [
   { value: '', label: 'All' },
   { value: 'gis-technology', label: 'GIS Technology' },
@@ -43,6 +43,7 @@ export default function BlogPage() {
       </Helmet>
 
       <PageHero
+      img={Blog}
         label="Insights"
         title="Perspectives on geospatial intelligence"
         subtitle="Original analysis, technology deep-dives, and domain insights from Digital Indian's specialists."
