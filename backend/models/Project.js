@@ -7,12 +7,12 @@ const projectSchema = new mongoose.Schema({
   fullDescription: { type: String },
   category: {
     type: String,
-    enum: ['web-gis', 'mobile-gis', 'remote-sensing', 'data-engineering', 'land-information', 'urban-planning', 'utility-mapping', 'survey-digitization', 'geo-ai', 'consulting'],
+    enum: ['web-gis', 'mobile-gis', 'remote-sensing', 'data-engineering', 'land-information', 'urban-planning', 'utility-mapping', 'survey-digitization', 'geo-ai', 'consulting','full-stack-development','enterprise-web-solutions','mobile-app-development','cloud-devops-solutions','ai-data-solutions'],
     required: true
   },
   industry: {
     type: String,
-    enum: ['urban-planning', 'engineering', 'agriculture', 'environment', 'utilities', 'transportation', 'land-property', 'disaster-management', 'government', 'mining'],
+    enum: ['urban-planning', 'engineering', 'agriculture', 'environment', 'utilities', 'transportation', 'land-property', 'disaster-management', 'government', 'mining','e-commerce-handicrafts','e-commerce ','food-delivery-subscription','education / edTech','education'],
     required: true
   },
   client: { type: String },
