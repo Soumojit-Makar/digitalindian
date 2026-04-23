@@ -150,7 +150,7 @@ export default function HomePage() {
   useEffect(() => {
     Promise.allSettled([
       serviceAPI.getAll(),
-      projectAPI.getAll({ featured: true, limit: 3 }),
+      projectAPI.getAll({ featured: true, limit: 6 }),
       blogAPI.getAll({ featured: true, limit: 3 }),
     ])
       .then(([servicesRes, projectsRes, blogsRes]) => {
