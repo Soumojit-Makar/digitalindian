@@ -7,7 +7,7 @@ import { projectAPI } from '../../services/api'
 import ImageUploader from '../../components/ui/ImageUploader'
 
 const CATEGORIES = ['web-gis','mobile-gis','remote-sensing','data-engineering','land-information','urban-planning','utility-mapping','survey-digitization','geo-ai','consulting','full-stack-development','enterprise-web-solutions','mobile-app-development','cloud-devops-solutions','ai-data-solutions','enterprise-web-solutions']
-const INDUSTRIES = ['urban-planning','engineering','agriculture','environment','utilities','transportation','land-property','disaster-management','government','mining']
+const INDUSTRIES = ['urban-planning','engineering','agriculture','environment','utilities','transportation','land-property','disaster-management','government','mining','e-commerce-handicrafts','e-commerce ','food-delivery-subscription','education / edTech','education']
 
 const INIT = {
   title: '', slug: '', shortDescription: '', fullDescription: '', category: '',

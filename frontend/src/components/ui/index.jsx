@@ -38,7 +38,7 @@ export function PageHero({ label, title, subtitle, breadcrumb, img }) {
         backgroundImage: img ? `url(${img})` : 'none',
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/70 to-white/85" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/65 via-white/45 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         {breadcrumb && (
@@ -60,7 +60,7 @@ export function PageHero({ label, title, subtitle, breadcrumb, img }) {
 
         {label && <p className="section-label">{label}</p>}
 
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-3 max-w-4xl leading-tight">
+        <h1 className="font-display text-2xl md:text-4xl font-bold text-slate-900 mb-3 max-w-4xl leading-tight">
           {title}
         </h1>
 
