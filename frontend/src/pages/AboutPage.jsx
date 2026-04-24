@@ -10,6 +10,61 @@ import {
 import { PageHero, CTABanner, SectionHeader } from "../components/ui/index.jsx";
 import LiderShip from "../assates/ar.jpeg";
 import About from "../assates/about.jpeg";
+import GIS_GEOSPATIAL_SERVICES from "../assates/gis-&-geospatial-services.png";
+import IT_DIGITAL_SOLUTIONS from "../assates/it-&-digital-solutions.png";
+import Approach from "../assates/Approach.png";
+import Commitment from "../assates/Commitment.png";
+import Vision from "../assates/vision.png";
+import Mission from "../assates/mission.png";
+import Jun from "../assates/jurn.png";
+import CEO from "../assates/ceo.png";
+import Manager from "../assates/manager.png"
+import ITENG from '../assates/ITENG.png'
+import CTO from '../assates/cto.png'
+const team = [
+  {
+    name: "S",
+    role: "Founder & CEO",
+    img: CEO,
+    bio: "Leads overall strategy, business growth, and enterprise GIS & IT solutions with extensive industry experience.",
+  },
+  {
+    name: "P",
+    role: "Chief Technology Officer (CTO)",
+    img:CTO,
+    bio: "Drives technology architecture, cloud systems, and scalable enterprise platforms across GIS and IT domains.",
+  },
+  {
+    name: "P",
+    role: "Head of GIS & Remote Sensing",
+    img:Manager,
+    bio: "Expert in spatial data analysis, satellite imagery, and large-scale geospatial project execution.",
+  },
+  {
+    name: "S",
+    role: "Head of IT & Engineering",
+    img:ITENG,
+    bio: "Specialist in full-stack development, Web GIS platforms, and high-performance system integration.",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Rajiv Mehta",
+    role: "Project Director · Infrastructure & Urban Planning",
+    text: "Digital Indian delivered highly accurate GIS mapping and spatial analytics for our infrastructure project. Their ability to handle large-scale geospatial data and provide actionable insights significantly improved our planning and execution efficiency.",
+  },
+  {
+    name: "Ananya Roy",
+    role: "Senior Manager · Government GIS Program",
+    text: "Their expertise in land records digitization and Web GIS platforms helped us modernize our entire system. The dashboards were intuitive, scalable, and extremely reliable for decision-making at multiple administrative levels.",
+  },
+  {
+    name: "Vikram Singh",
+    role: "CTO · Enterprise Technology Solutions",
+    text: "We partnered with Digital Indian for integrating GIS with our enterprise applications. Their team delivered a robust, cloud-based solution with seamless performance and excellent scalability and high availability.",
+  },
+];
 
 const milestones = [
   {
@@ -178,53 +233,67 @@ export default function AboutPage() {
         <div className="max-w-[1450px] mx-auto px-3 sm:px-4">
           <SectionHeader label="" title="What We Do" center />
           <div className="mt-8 grid md:grid-cols-2 gap-5">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7">
-              <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-brand-100 bg-brand-50">
-                  <Globe className="w-5 h-5 text-brand-500" />
-                </div>
-                <h3 className="font-display text-xl font-bold text-slate-900">
-                  GIS & Geospatial Services
-                </h3>
+            <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden hover:shadow-lg transition">
+              {/* Image Section */}
+              <div className="h-40 w-full overflow-hidden">
+                <img
+                  src={GIS_GEOSPATIAL_SERVICES}
+                  alt="GIS Services"
+                  className="w-full h-full object-cover transition duration-500 hover:scale-105"
+                />
               </div>
 
-              <div className="space-y-3">
-                {[
-                  "High-accuracy mapping and spatial data creation",
-                  "Satellite imagery analysis and remote sensing",
-                  "Land records digitization and spatial database management",
-                  "Web GIS and dashboard development",
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent-500" />
-                    <p className="text-sm leading-7 text-slate-600">{item}</p>
-                  </div>
-                ))}
+              {/* Content Section */}
+              <div className="p-6 md:p-7">
+                <h3 className="font-display text-xl font-bold text-slate-900 mb-3">
+                  GIS & Geospatial Services
+                </h3>
+
+                <div className="space-y-3">
+                  {[
+                    "High-accuracy mapping and spatial data creation",
+                    "Satellite imagery analysis and remote sensing",
+                    "Land records digitization and spatial database management",
+                    "Web GIS and dashboard development",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <CheckCircle className="mt-0.5 h-5 w-5 text-accent-500" />
+                      <p className="text-lg leading-7 text-slate-600">{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7">
-              <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-brand-100 bg-brand-50">
-                  <Zap className="w-5 h-5 text-brand-500" />
-                </div>
-                <h3 className="font-display text-xl font-bold text-slate-900">
-                  IT & Digital Solutions
-                </h3>
+            <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden hover:shadow-lg transition">
+              {/* Image Section */}
+              <div className="h-40 w-full overflow-hidden">
+                <img
+                  src={IT_DIGITAL_SOLUTIONS}
+                  alt="IT Solutions"
+                  className="w-full h-full object-cover transition duration-500 hover:scale-105"
+                />
               </div>
 
-              <div className="space-y-3">
-                {[
-                  "Custom software and web application development",
-                  "Mobile app development",
-                  "Cloud-based solutions and system integration",
-                  "Data analytics and automation tools",
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent-500" />
-                    <p className="text-sm leading-7 text-slate-600">{item}</p>
-                  </div>
-                ))}
+              {/* Content Section */}
+              <div className="p-6 md:p-7">
+                <h3 className="font-display text-xl font-bold text-slate-900 mb-3">
+                  IT & Digital Solutions
+                </h3>
+
+                <div className="space-y-3">
+                  {[
+                    "Custom software and web application development",
+                    "Mobile app development",
+                    "Cloud-based solutions and system integration",
+                    "Data analytics and automation tools",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <CheckCircle className="mt-0.5 h-5 w-5 text-accent-500" />
+                      <p className="text-lg leading-7 text-slate-600">{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -241,49 +310,76 @@ export default function AboutPage() {
           />
 
           <div className="mt-8 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
-            <div className="rounded-2xl p-6 bg-white border border-blue-100 hover:shadow-md transition hover:-translate-y-1">
-              <Target className="w-6 h-6 mb-4 text-blue-600" />
-              <h3 className="font-display text-lg font-bold mb-2 text-slate-900">
+            <div className="rounded-2xl p-2 bg-white border border-blue-100 hover:shadow-md transition hover:-translate-y-1">
+              <div className=" w-full overflow-hidden">
+                <img
+                  src={Mission}
+                  alt="Mission"
+                  className="w-full h-full object-cover transition duration-500 hover:scale-105 rounded-lg"
+                />
+              </div>
+
+              <h3 className="font-display text-xl font-bold mb-2 text-slate-900 text-center">
                 Mission
               </h3>
-              <p className="text-sm leading-6 text-slate-600">
+              <p className="text-lg leading-6 text-slate-600">
                 To empower organizations with intelligent geospatial and digital
                 solutions that drive efficiency, innovation, and sustainable
                 growth.
               </p>
             </div>
 
-            <div className="rounded-2xl p-6 bg-white border border-indigo-100 hover:shadow-md transition hover:-translate-y-1">
-              <Eye className="w-6 h-6 mb-4 text-indigo-600" />
-              <h3 className="font-display text-lg font-bold mb-2 text-slate-900">
+            <div className="rounded-2xl p-2 bg-white border border-indigo-100 hover:shadow-md transition hover:-translate-y-1">
+              <div className=" w-full overflow-hidden">
+                <img
+                  src={Vision}
+                  alt="Vision"
+                  className="w-full h-full object-cover transition duration-500 hover:scale-105  rounded-lg"
+                />
+              </div>
+
+              <h3 className="font-display text-xl font-bold mb-2 text-slate-900  text-center">
                 Vision
               </h3>
-              <p className="text-sm leading-6 text-slate-600">
+              <p className="text-lg leading-6 text-slate-600">
                 To be a trusted leader in GIS and IT services, recognized for
                 delivering impactful, technology-driven solutions that shape
                 smarter communities and businesses.
               </p>
             </div>
 
-            <div className="rounded-2xl p-6 bg-white border border-orange-100 hover:shadow-md transition hover:-translate-y-1">
-              <Zap className="w-6 h-6 mb-4 text-orange-500" />
-              <h3 className="font-display text-lg font-bold mb-2 text-slate-900">
+            <div className="rounded-2xl p-2 bg-white border border-orange-100 hover:shadow-md transition hover:-translate-y-1">
+              <div className=" w-full overflow-hidden">
+                <img
+                  src={Approach}
+                  alt="Approach"
+                  className="w-full h-full object-cover transition duration-500 hover:scale-105  rounded-lg"
+                />
+              </div>
+
+              <h3 className="font-display text-xl font-bold mb-2 text-slate-900  text-center">
                 Approach
               </h3>
-              <ul className="space-y-1 text-sm text-slate-600 leading-6">
-                <li>• Understanding unique business challenges</li>
-                <li>• Designing scalable and future-ready solutions</li>
-                <li>• Ensuring accuracy, quality, and timely delivery</li>
-                <li>• Providing continuous support and innovation</li>
-              </ul>
+              <p className="text-lg leading-6 text-slate-600">
+                Understanding unique business challenges. Designing scalable and
+                future-ready solutions. Ensuring accuracy, quality, and timely
+                delivery. Providing continuous support and innovation.
+              </p>
             </div>
 
-            <div className="rounded-2xl p-6 bg-white border border-emerald-100 hover:shadow-md transition hover:-translate-y-1">
-              <ShieldCheck className="w-6 h-6 mb-4 text-emerald-600" />
-              <h3 className="font-display text-lg font-bold mb-2 text-slate-900">
+            <div className="rounded-2xl p-2 bg-white border border-emerald-100 hover:shadow-md transition hover:-translate-y-1">
+              <div className=" w-full overflow-hidden">
+                <img
+                  src={Commitment}
+                  alt="Commitment"
+                  className="w-full h-full object-cover transition duration-500 hover:scale-105 rounded-lg"
+                />
+              </div>
+
+              <h3 className="font-display text-xl font-bold mb-2 text-slate-900 text-center">
                 Commitment
               </h3>
-              <p className="text-sm leading-6 text-slate-600">
+              <p className="text-lg leading-6 text-slate-600">
                 We are committed to building solutions that not only solve
                 today’s challenges but also prepare organizations for the
                 future—leveraging the power of data, location intelligence, and
@@ -295,48 +391,107 @@ export default function AboutPage() {
       </section>
 
       {/* Journey */}
-      <section className="py-2 md:py-2 pt-6 bg-slate-50">
-        <div className="max-w-[1200px] mx-auto px-3 sm:px-4">
-          <SectionHeader label="" title="Our Journey" center />
-
-          <div className="relative mt-8">
-            <div className="absolute left-4 top-0 bottom-0 w-px bg-brand-100" />
-            <div className="space-y-7">
-              {milestones.map(({ year, event }) => (
-                <div key={year} className="relative pl-12">
-                  <p className="mb-1 font-display font-bold text-brand-600">
-                    {year}
-                  </p>
-                  <p className="text-sm leading-7 text-slate-600">{event}</p>
-                </div>
-              ))}
-            </div>
+      {/* Journey */}
+      <section className="py-12 bg-slate-50">
+        <div className="max-w-[1200px] mx-auto px-4">
+          <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+            <img
+              src={Jun}
+              alt="Journey Infographic"
+              className="w-full h-auto object-contain"
+            />
           </div>
         </div>
       </section>
-
       {/* Why Choose Us */}
-      <section className="py-2 md:py-2 pt-6 bg-white">
-        <div className="max-w-[1450px] mx-auto  sm:px-4">
+      {/* Why Choose Us → Now Testimonials */}
+      <section className="py-8 bg-slate-50">
+        <div className="max-w-[1450px] mx-auto px-3 sm:px-4">
           <SectionHeader label="" title="Why Choose Us" center />
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-2 ">
-            {whyChooseUs.map((item) => (
+
+          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.map((item, index) => (
               <div
-                key={item}
-                className="rounded-2xl border border-slate-200 bg-white p-2"
+                key={index}
+                className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent-500" />
-                  <p className="text-sm leading-7 text-slate-600">{item}</p>
+                {/* Stars */}
+                <div className="text-yellow-400 text-lg mb-4 tracking-widest">
+                  ★★★★★
+                </div>
+
+                {/* Text */}
+                <p className="text-base leading-7 text-slate-600 italic">
+                  "{item.text}"
+                </p>
+
+                {/* Divider */}
+                <div className="my-5 h-px bg-slate-100" />
+
+                {/* User */}
+                <div className="flex items-center gap-4">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-blue-700 font-semibold">
+                    {item.name[0]}
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-slate-900">
+                      {item.name}
+                    </h4>
+                    <p className="text-sm text-slate-400">{item.role}</p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+     <section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <SectionHeader
+      label="Leadership"
+      title="The team behind Digital Indian"
+    />
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {team.map(({ name, role, bio, img }) => (
+        <div
+          key={name}
+          className="group relative rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300"
+        >
+          {/* IMAGE / AVATAR */}
+          {img ? (
+            <img
+              src={img}
+              alt={name}
+              className="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+            />
+          ) : (
+            <div className="w-full h-64 flex items-center justify-center bg-brand-500 text-white text-4xl font-bold">
+              {name.charAt(0)}
+            </div>
+          )}
+
+          {/* OVERLAY (HOVER) */}
+          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center px-4">
+            <h3 className="text-white font-semibold text-lg mb-1">
+              {name}
+            </h3>
+            <p className="text-brand-300 text-xs font-semibold mb-2">
+              {role}
+            </p>
+            <p className="text-white/80 text-xs leading-relaxed">
+              {bio}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Leadership */}
-      <section className="py-2 md:py-2 bg-white">
+      {/* <section className="py-2 md:py-2 bg-white">
         <div className="max-w-[1500px] mx-auto px-3 sm:px-4">
           <SectionHeader
             label=""
@@ -353,17 +508,38 @@ export default function AboutPage() {
               />
             </div>
           </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {team.map(({ name, role }) => {
+              <div
+                key={name}
+                className="bg-white border border-slate-200 rounded-xl p-5 text-center"
+              >
+                <div className="w-14 h-14 rounded-full bg-brand-500 flex items-center justify-center mx-auto mb-4 text-white font-display font-bold text-xl">
+                  {name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
+                </div>
+                <h3 className="font-display font-semibold text-slate-900">
+                  {name}
+                </h3>
+                <p className="text-brand-600 text-xs font-semibold mb-2">
+                  {role}
+                </p>
+              </div>;
+            })}
+          </div>
         </div>
-      </section>
+      </section> */}
 
-      <CTABanner
+      {/* <CTABanner
         title="Let’s build with GIS intelligence and IT innovation"
         subtitle="From mapping systems to enterprise platforms, we’re ready to support your next digital initiative."
         primaryLabel="Get in Touch"
         primaryTo="/contact"
         secondaryLabel="Our Services"
         secondaryTo="/services"
-      />
+      /> */}
     </>
   );
 }

@@ -693,8 +693,8 @@ export default function HomePage() {
           </span>
 
           <h2 className="mb-4 font-display text-3xl font-bold leading-tight text-white md:text-4xl">
-            Let’s build your next
-            <span className="text-brand-400"> digital solution</span>
+            Let’s Build Your Next
+            <span className="text-brand-400"> Digital Solution</span>
           </h2>
 
           <p className="mx-auto mb-8 max-w-2xl leading-7 text-slate-400">
