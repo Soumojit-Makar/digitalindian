@@ -21,6 +21,7 @@ import CEO from "../assates/ceo.png";
 import Manager from "../assates/manager.png"
 import ITENG from '../assates/ITENG.png'
 import CTO from '../assates/cto.png'
+import BusinessHead from '../assates/BUS.png'
 const team = [
   {
     name: "S",
@@ -31,21 +32,27 @@ const team = [
   {
     name: "P",
     role: "Chief Technology Officer (CTO)",
-    img:CTO,
+    img: CTO,
     bio: "Drives technology architecture, cloud systems, and scalable enterprise platforms across GIS and IT domains.",
   },
   {
-    name: "P",
+    name: "S",
     role: "Head of GIS & Remote Sensing",
-    img:Manager,
+    img: Manager,
     bio: "Expert in spatial data analysis, satellite imagery, and large-scale geospatial project execution.",
   },
   {
     name: "S",
     role: "Head of IT & Engineering",
-    img:ITENG,
+    img: ITENG,
     bio: "Specialist in full-stack development, Web GIS platforms, and high-performance system integration.",
   },
+  {
+  name: "J",
+  role: "Head of Global Operations",
+  img: BusinessHead,
+  bio: "Leads global operations, strategic partnerships, and cross-regional execution, ensuring efficient delivery and scalable growth across GIS and IT services.",
+}
 ];
 
 const testimonials = [
@@ -453,7 +460,7 @@ export default function AboutPage() {
       title="The team behind Digital Indian"
     />
 
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
       {team.map(({ name, role, bio, img }) => (
         <div
           key={name}
@@ -464,10 +471,10 @@ export default function AboutPage() {
             <img
               src={img}
               alt={name}
-              className="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
+              className="w-60 h-48 object-cover group-hover:scale-110 transition duration-500"
             />
           ) : (
-            <div className="w-full h-64 flex items-center justify-center bg-brand-500 text-white text-4xl font-bold">
+            <div className="w-60 h-48 flex items-center justify-center bg-brand-500 text-white text-4xl font-bold">
               {name.charAt(0)}
             </div>
           )}
