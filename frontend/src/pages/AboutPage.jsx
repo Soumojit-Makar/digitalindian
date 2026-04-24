@@ -457,7 +457,7 @@ export default function AboutPage() {
   <div className="max-w-7xl mx-auto px-4 sm:px-6">
     <SectionHeader
       label="Leadership"
-      title="The team behind Digital Indian"
+      title=""
     />
 
     <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
