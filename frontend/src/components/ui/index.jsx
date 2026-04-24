@@ -65,7 +65,7 @@ export function PageHero({ label, title, subtitle, breadcrumb, img }) {
         </h1>
 
         {subtitle && (
-          <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
+          <p className="text-lg text-blue-900-900 max-w-2xl leading-relaxed">
             {subtitle}
           </p>
         )}
@@ -118,20 +118,26 @@ export function CTABanner({
 /* ── ServiceCard ───────────────────────────────────────────────────── */
 export function ServiceCard({ service }) {
   return (
-    <Link to={`/services/${service.slug}`} className="card  group block">
-      <img
-        src={service.icon}
-        alt={service.title}
-        className="w-full object-cover h-auto"
-      />
-      <div className="p-6">
-        <h3 className="font-display font-semibold text-slate-900  group-hover:text-brand-600 transition-colors">
+    <Link to={`/services/${service.slug}`} className="card group block flex flex-col h-full">
+      
+      <div className="w-full h-48 overflow-hidden">
+        <img
+          src={service.icon}
+          alt={service.title}
+          className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+        />
+      </div>
+
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="font-display font-semibold text-slate-900 group-hover:text-brand-600 transition-colors">
           {service.title}
         </h3>
-        <p className="text-sm text-slate-500 leading-relaxed line-clamp-3">
+
+        <p className="text-sm text-slate-500 leading-relaxed line-clamp-3 mt-2">
           {service.summary}
         </p>
-        <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand-600 group-hover:gap-2 transition-all">
+
+        <span className="mt-auto inline-flex items-center gap-1 text-xs font-semibold text-brand-600 group-hover:gap-2 transition-all">
           Learn more <ArrowRight className="w-3.5 h-3.5" />
         </span>
       </div>

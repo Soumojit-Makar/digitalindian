@@ -19,6 +19,11 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
 import { serviceAPI, projectAPI, blogAPI } from "../services/api";
 import {
   ServiceCard,
@@ -30,6 +35,41 @@ import EnquiryForm from "../components/forms/EnquiryForm";
 
 import HeroIT from "../assates/hero-it.png";
 import HeroGIS from "../assates/hero-gis.png";
+// Partner logos
+import Accenture from "../assates/Accenture.png";
+import Amazon from "../assates/Amazon.png";
+import Assocham from "../assates/ASSOCHAM.png";
+import AxisBank from "../assates/Axis-Bank.png";
+import BajaFinance from "../assates/Baja-Finance.png";
+import BandhanBank from "../assates/bandhan-bank-logo.png";
+import Capgemini from "../assates/Capgemini.png";
+import CII from "../assates/CII.png";
+import Citigroup from "../assates/Citigroup.png";
+import Cognizant from "../assates/Cognizant.png";
+import Deloitte from "../assates/Deloitte.png";
+import EY from "../assates/EY.png";
+import GoldmanSachs from "../assates/Goldman-Sachs.png";
+import Google from "../assates/google-logo.png";
+import HCL from "../assates/HCL.png";
+import HDFC from "../assates/HDFC.png";
+import HSBC from "../assates/HSBC-Holdings.png";
+import IBM from "../assates/IBM.png";
+import ICICI from "../assates/ICICI-Bank.png";
+import Infosys from "../assates/Infosys_Logo.png";
+import JioFinancial from "../assates/Jio-Financial-Services.png";
+import JPMorgan from "../assates/JPMorgan-Chase.png";
+import Kotak from "../assates/Kotak-Mahindra-Bank-Limited.png";
+import KPMG from "../assates/KPMG.png";
+import Microsoft from "../assates/Microsoft.png";
+import MorganStanley from "../assates/Morgan-Stanley.png";
+import NASSCOM from "../assates/nasscom.png";
+import Oracle from "../assates/Oracle-logo.png";
+import PcW from "../assates/PwC.png";
+import SkillIndia from "../assates/skill-india.png";
+import StartUpindian from "../assates/Startupindian.png";
+import TCS from "../assates/TCS.png";
+import TechMahindra from "../assates/tech-mahindra.png";
+import Wipro from "../assates/Wipro-logo.png";
 
 function Counter({ end, suffix = "" }) {
   const [count, setCount] = useState(0);
@@ -63,6 +103,110 @@ function Counter({ end, suffix = "" }) {
   );
 }
 
+const HERO_IMAGES = [
+  {
+    image: Accenture,
+  },
+  {
+    image: Amazon,
+  },
+  {
+    image: Assocham,
+  },
+  {
+    image: Capgemini,
+  },
+  {
+    image: CII,
+  },
+  {
+    image: Cognizant,
+  },
+  {
+    image: Google,
+  },
+  {
+    image: HCL,
+  },
+  {
+    image: IBM,
+  },
+  {
+    image: Infosys,
+  },
+  {
+    image: Microsoft,
+  },
+  {
+    image: Oracle,
+  },
+  {
+    image: TCS,
+  },
+  {
+    image: Wipro,
+  },
+  {
+    image: NASSCOM,
+  },
+  {
+    image: SkillIndia,
+  },
+  {
+    image: StartUpindian,
+  },
+  {
+    image: AxisBank,
+  },
+  {
+    image: BajaFinance,
+  },
+  {
+    image: BandhanBank,
+  },
+  {
+    image: Citigroup,
+  },
+  {
+    image: Deloitte,
+  },
+  {
+    image: EY,
+  },
+  {
+    image: GoldmanSachs,
+  },
+  {
+    image: HDFC,
+  },
+  {
+    image: HSBC,
+  },
+  {
+    image: ICICI,
+  },
+  {
+    image: JioFinancial,
+  },
+  {
+    image: JPMorgan,
+  },
+  {
+    image: Kotak,
+  },
+  {
+    image: KPMG,
+  },
+  {
+    image: MorganStanley,
+  },
+  {
+    image: PcW,
+  },
+  {
+    image: TechMahindra,
+  },
+];
 const stats = [
   { val: 150, suf: "+", label: "Projects Delivered", icon: TrendingUp },
   { val: 95, suf: "+", label: "Enterprise & Govt Clients", icon: Building2 },
@@ -115,28 +259,28 @@ const heroSlides = [
   {
     id: 1,
     image: HeroIT,
-    badge: "Digital Transformation & Software Engineering",
+    // badge: "Digital Transformation & Software Engineering",
     title: "Smart IT Solutions",
     highlight: "For Modern Businesses.",
     description:
       "We build scalable software platforms, cloud-enabled systems, enterprise applications, and AI-powered digital products that accelerate growth.",
-    primaryBtn: "Request a Demo",
-    secondaryBtn: "View Projects",
-    primaryLink: "/contact",
-    secondaryLink: "/projects",
+    // primaryBtn: "Request a Demo",
+    // secondaryBtn: "View Projects",
+    // primaryLink: "/contact",
+    // secondaryLink: "/projects",
   },
   {
     id: 2,
     image: HeroGIS,
-    badge: "Geospatial Intelligence & Mapping Solutions",
+    // badge: "Geospatial Intelligence & Mapping Solutions",
     title: "Advanced GIS & Geospatial Solutions",
     highlight: "For Modern India.",
     description:
       "Digital Indian helps government, utilities, infrastructure, and enterprise teams turn spatial data into decisions using GIS, remote sensing, Web GIS, and geospatial analytics.",
-    primaryBtn: "Explore Services",
-    secondaryBtn: "Contact Us",
-    primaryLink: "/services",
-    secondaryLink: "/contact",
+    // primaryBtn: "Explore Services",
+    // secondaryBtn: "Contact Us",
+    // primaryLink: "/services",
+    // secondaryLink: "/contact",
   },
 ];
 
@@ -180,9 +324,7 @@ export default function HomePage() {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) =>
-      prev === 0 ? heroSlides.length - 1 : prev - 1
-    );
+    setCurrentSlide((prev) => (prev === 0 ? heroSlides.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
@@ -202,7 +344,7 @@ export default function HomePage() {
       </Helmet>
 
       {/* HERO CAROUSEL */}
-      <section className="relative pt-24 pb-14 md:pb-16 min-h-[720px] flex items-center overflow-hidden">
+      <section className="relative pt-24 pb-2 md:pb-2 min-h-[520px] flex items-center overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSlide.id}
@@ -218,24 +360,25 @@ export default function HomePage() {
         </AnimatePresence>
 
         {/* Overlay */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-r from-slate-950/85 via-slate-900/60 to-slate-900/20" />
-        <div className="absolute inset-0 z-[1] bg-black/20" />
+        {/* Overlay */}
+        <div className="absolute inset-0 z-[1] bg-black/30" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-r " />
 
         {/* Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 md:left-6 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/80 shadow backdrop-blur transition hover:bg-white"
+          className="absolute left-4 md:left-6 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20    transition hover:bg-gray-700"
           aria-label="Previous slide"
         >
-          <ChevronLeft className="h-5 w-5 text-slate-700" />
+          <ChevronLeft className="h-5 w-5 text-slate-100 " />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 md:right-6 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/80 shadow backdrop-blur transition hover:bg-white"
+          className="absolute right-4 md:right-6 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20  transition hover:bg-gray-700"
           aria-label="Next slide"
         >
-          <ChevronRight className="h-5 w-5 text-slate-700" />
+          <ChevronRight className="h-5 w-5 text-slate-100" />
         </button>
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6">
@@ -248,21 +391,21 @@ export default function HomePage() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.55 }}
               >
-                <span className="mb-5 inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-md">
+                {/* <span className="mb-5 inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-md">
                   {activeSlide.badge}
-                </span>
+                </span> */}
 
-                <h1 className="mb-5 font-display text-3xl font-bold leading-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)] sm:text-3xl md:text-3xl">
+                <h1 className="mb-5 font-display text-4xl md:text-5xl font-bold leading-tight text-white drop-shadow-lg">
                   {activeSlide.title}
                   <br />
-                  <span className="text-cyan-300">{activeSlide.highlight}</span>
+                  <span className="text-teal-300">{activeSlide.highlight}</span>
                 </h1>
 
-                <p className="mb-8 max-w-xl  leading-relaxed text-slate-200 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
+                <p className="mb-8 max-w-xl text-lg leading-relaxed text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.6)]">
                   {activeSlide.description}
                 </p>
 
-                <div className="mb-10 flex flex-wrap gap-3">
+                {/* <div className="mb-10 flex flex-wrap gap-3">
                   <Link
                     to={activeSlide.primaryLink}
                     className="btn-primary px-7 py-3"
@@ -276,7 +419,7 @@ export default function HomePage() {
                   >
                     {activeSlide.secondaryBtn}
                   </Link>
-                </div>
+                </div> */}
 
                 <div className="grid grid-cols-2 gap-6 border-t border-white/20 pt-8 sm:grid-cols-4">
                   {stats.map(({ val, suf, label }) => (
@@ -284,7 +427,7 @@ export default function HomePage() {
                       <p className="font-display text-3xl font-bold text-white">
                         <Counter end={val} suffix={suf} />
                       </p>
-                      <p className="mt-1 text-xs text-slate-200">{label}</p>
+                      <p className="mt-1 text-xs text-white/80">{label}</p>
                     </div>
                   ))}
                 </div>
@@ -313,30 +456,27 @@ export default function HomePage() {
       </section>
 
       {/* TECH STRIP */}
-      <section className="border-y border-slate-100 bg-slate-50 py-5">
-        <div className="mx-auto max-w-7xl px-4">
-          <p className="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-slate-400">
-            Technologies We Work With
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
-            {[
-              "React.js",
-              "Node.js",
-              "MongoDB",
-              "PostgreSQL",
-              "AWS",
-              "Docker",
-              "Esri ArcGIS",
-              "QGIS",
-              "Mapbox GL",
-              "PostGIS",
-              "GeoServer",
-              "Google Earth Engine",
-            ].map((tech) => (
-              <span key={tech} className="text-sm font-medium text-slate-500">
-                {tech}
-              </span>
-            ))}
+      {/* TECH STRIP - PREMIUM MARQUEE */}
+      <section className="bg-white py-8 relative z-10 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="relative overflow-hidden">
+            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-white to-transparent" />
+            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-white to-transparent" />
+
+            <div className="marquee-track flex w-max items-center gap-6">
+              {[...HERO_IMAGES, ...HERO_IMAGES].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex h-20 w-40 flex-shrink-0 items-center justify-center rounded-xl border border-slate-100 bg-white px-5 shadow-sm transition-all duration-300 hover:shadow-md"
+                >
+                  <img
+                    src={item.image}
+                    alt={`Partner logo ${index + 1}`}
+                    className="max-h-12 max-w-full object-contain grayscale transition duration-300 hover:grayscale-0"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
