@@ -299,7 +299,7 @@ export default function HomePage() {
     ])
       .then(([servicesRes, projectsRes, blogsRes]) => {
         if (servicesRes.status === "fulfilled") {
-          setServices(servicesRes.value.data.services?.slice(0, 6) || []);
+          setServices(servicesRes.value.data.services?.slice(0, 10) || []);
         }
         if (projectsRes.status === "fulfilled") {
           setProjects(projectsRes.value.data.projects || []);
@@ -482,7 +482,7 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-white py-16 md:py-20">
+      <section className="bg-white py-8 md:py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -500,7 +500,7 @@ export default function HomePage() {
           {loading ? (
             <LoadingSpinner />
           ) : (
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
               {services.map((service) => (
                 <ServiceCard key={service._id} service={service} />
               ))}
