@@ -32,7 +32,7 @@ const links = [
   { label: "About", to: "/about" },
   { label: "Services", to: "/services", dropdown: services },
   // { label: "Industries", to: "/industries" },
-  { label: "Projects", to: "/projects" },
+  { label: "Case Studies", to: "/projects" },
   { label: "Insights", to: "/insights" },
   { label: "Careers", to: "/careers" },
 ];
