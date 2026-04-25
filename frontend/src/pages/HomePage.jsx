@@ -547,7 +547,7 @@ export default function HomePage() {
       </section>
 
       {/* PROJECTS */}
-      {projects.length > 0 && (
+      {/* {projects.length > 0 && (
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="mb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between">
@@ -570,10 +570,10 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
       {/* PROCESS */}
-      <section className="bg-slate-50 py-16 md:py-20">
+      {/* <section className="bg-slate-50 py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 text-center">
             <p className="section-label">How We Work</p>
@@ -594,10 +594,10 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* BLOG */}
-      {blogs.length > 0 && (
+      {/* {blogs.length > 0 && (
         <section className="bg-white py-16 md:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="mb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between">
@@ -620,7 +620,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
       {/* CONTACT */}
       <section className="bg-slate-50 py-16">
