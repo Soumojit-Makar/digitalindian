@@ -22,6 +22,7 @@ import Manager from "../assates/manager.png"
 import ITENG from '../assates/ITENG.png'
 import CTO from '../assates/cto.png'
 import BusinessHead from '../assates/BUS.png'
+
 const team = [
   {
     name: "S",

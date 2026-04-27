@@ -118,7 +118,7 @@ export function CTABanner({
 /* ── ServiceCard ───────────────────────────────────────────────────── */
 export function ServiceCard({ service }) {
   return (
-    <Link to={`/services/${service.slug}`} className="card group block flex flex-col h-full">
+    <Link to={`/services/${service.slug}`} className="card group  flex flex-col h-full">
       
       <div className="w-full h-48 overflow-hidden">
         <img
