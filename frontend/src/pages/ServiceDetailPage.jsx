@@ -52,7 +52,7 @@ export default function ServiceDetailPage() {
 
       {/* 🔥 Service Image Section */}
       {service.icon && (
-        <section className="bg-gradient-to-b from-white to-slate-50 py-12">
+        <section className="bg-gradient-to-b from-white to-slate-50 py-6">
           <div className="max-w-6xl mx-auto px-4">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
@@ -68,7 +68,7 @@ export default function ServiceDetailPage() {
       )}
 
       {/* Main Section */}
-      <section className="py-20 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
 
