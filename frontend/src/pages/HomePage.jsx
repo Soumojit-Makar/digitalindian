@@ -215,16 +215,16 @@ const stats = [
 ];
 
 const sectors = [
-  { label: "Government", icon: Shield },
-  { label: "Enterprise IT", icon: Database },
-  { label: "Urban Planning", icon: Building2 },
-  { label: "Infrastructure", icon: Zap },
-  { label: "Utilities", icon: Activity },
-  { label: "Logistics", icon: Globe },
-  { label: "Land & Property", icon: Layers },
-  { label: "Agriculture", icon: MapPin },
-  { label: "Environment", icon: Satellite },
-  { label: "AI & Analytics", icon: TrendingUp },
+  { label: "Government", icon: Shield, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
+  { label: "Enterprise IT", icon: Database, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
+  { label: "Urban Planning", icon: Building2, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
+  { label: "Infrastructure", icon: Zap, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
+  { label: "Utilities", icon: Activity, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
+  { label: "Logistics", icon: Globe, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
+  { label: "Land & Property", icon: Layers, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
+  { label: "Agriculture", icon: MapPin, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
+  { label: "Environment", icon: Satellite, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
+  { label: "AI & Analytics", icon: TrendingUp, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
 ];
 
 const process = [
@@ -443,11 +443,10 @@ export default function HomePage() {
               <button
                 key={slide.id}
                 onClick={() => goToSlide(index)}
-                className={`h-3 rounded-full transition-all duration-300 ${
-                  currentSlide === index
+                className={`h-3 rounded-full transition-all duration-300 ${currentSlide === index
                     ? "w-10 bg-white"
                     : "w-3 bg-white/40 hover:bg-white/70"
-                }`}
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
@@ -522,15 +521,23 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-5">
-            {sectors.map(({ label, icon: Icon }) => (
+            {sectors.map(({ label, image }) => (
               <Link
                 key={label}
                 to="/industries"
-                className="group flex flex-col items-center gap-2.5 rounded-xl border border-slate-200 bg-white p-4 text-center transition-all hover:border-brand-200 hover:shadow-sm"
+                className="group flex flex-col items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 text-center transition-all hover:border-brand-200 hover:shadow-md"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 transition-colors group-hover:bg-brand-500">
-                  <Icon className="h-5 w-5 text-brand-500 transition-colors group-hover:text-white" />
+                {/* Image Container */}
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-slate-50 overflow-hidden">
+                  <img
+                    src={image}
+                    alt={label}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
                 </div>
+
+                {/* Label */}
                 <span className="text-xs font-medium text-slate-600 transition-colors group-hover:text-brand-600">
                   {label}
                 </span>
