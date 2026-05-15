@@ -26,24 +26,48 @@ export default function IndustriesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-6">
-            {industries.map(({ icon: Icon, title, desc, useCases }) => (
-              <div key={title} className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-brand-200 transition-all">
-                <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-lg bg-brand-50 border border-brand-100 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-5 h-5 text-brand-500" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-display font-bold text-slate-900 text-lg mb-1">{title}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed mb-4">{desc}</p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {useCases.map(u => (
-                        <span key={u} className="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-full">{u}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+          {industries.map(({ image, title, desc, useCases }) => (
+  <div
+    key={title}
+    className="bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-md hover:border-brand-200 transition-all"
+  >
+    <div className="flex items-start gap-4 p-5">
+
+      {/* Image instead of Icon */}
+      <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 bg-slate-100">
+        <img
+          src={image}
+          alt={title}
+          loading="lazy"
+          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="flex-1">
+        <h3 className="font-display font-bold text-slate-900 text-lg mb-1">
+          {title}
+        </h3>
+
+        <p className="text-slate-500 text-sm leading-relaxed mb-4">
+          {desc}
+        </p>
+
+        <div className="flex flex-wrap gap-1.5">
+          {useCases.map((u) => (
+            <span
+              key={u}
+              className="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-full"
+            >
+              {u}
+            </span>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+))}
           </div>
         </div>
       </section>

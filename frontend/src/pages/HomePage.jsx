@@ -444,8 +444,8 @@ export default function HomePage() {
                 key={slide.id}
                 onClick={() => goToSlide(index)}
                 className={`h-3 rounded-full transition-all duration-300 ${currentSlide === index
-                    ? "w-10 bg-white"
-                    : "w-3 bg-white/40 hover:bg-white/70"
+                  ? "w-10 bg-white"
+                  : "w-3 bg-white/40 hover:bg-white/70"
                   }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -520,27 +520,29 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-5">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {sectors.map(({ label, image }) => (
               <Link
                 key={label}
                 to="/industries"
-                className="group flex flex-col items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 text-center transition-all hover:border-brand-200 hover:shadow-md"
+                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl"
               >
-                {/* Image Container */}
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-slate-50 overflow-hidden">
+                <div className="relative h-44 w-full overflow-hidden">
                   <img
                     src={image}
                     alt={label}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                </div>
 
-                {/* Label */}
-                <span className="text-xs font-medium text-slate-600 transition-colors group-hover:text-brand-600">
-                  {label}
-                </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 className="text-sm font-semibold text-white">
+                      {label}
+                    </h3>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
