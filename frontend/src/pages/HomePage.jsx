@@ -70,7 +70,17 @@ import StartUpindian from "../assates/Startupindian.png";
 import TCS from "../assates/TCS.png";
 import TechMahindra from "../assates/tech-mahindra.png";
 import Wipro from "../assates/Wipro-logo.png";
-
+// Institution logos
+import GOV from "../assates/Government.png";
+import EnterpriseIT from "../assates/EnterpriseIT.png"; 
+import UrbanPlanning from "../assates/Urban-Planning.png";
+import Infrastructure from "../assates/Infrastructure.png";
+import Utilities from "../assates/Utilities.png";
+import Logistics from "../assates/Logistics.png";
+import LandProperty from "../assates/Land-Property.png";
+import Agriculture from "../assates/Agriculture.png";
+import Environment from "../assates/Environment.png";
+import AIAnalytics from "../assates/AI-Analytics.png";
 function Counter({ end, suffix = "" }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -215,16 +225,16 @@ const stats = [
 ];
 
 const sectors = [
-  { label: "Government", icon: Shield, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { label: "Enterprise IT", icon: Database, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { label: "Urban Planning", icon: Building2, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { label: "Infrastructure", icon: Zap, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { label: "Utilities", icon: Activity, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { label: "Logistics", icon: Globe, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { label: "Land & Property", icon: Layers, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { label: "Agriculture", icon: MapPin, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { label: "Environment", icon: Satellite, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { label: "AI & Analytics", icon: TrendingUp, image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
+  { label: "Government", icon: Shield, image: GOV },
+  { label: "Enterprise IT", icon: Database, image: EnterpriseIT },
+  { label: "Urban Planning", icon: Building2, image: UrbanPlanning },
+  { label: "Infrastructure", icon: Zap, image: Infrastructure },
+  { label: "Utilities", icon: Activity, image: Utilities },
+  { label: "Logistics", icon: Globe, image: Logistics },
+  { label: "Land & Property", icon: Layers, image: LandProperty },
+  { label: "Agriculture", icon: MapPin, image: Agriculture },
+  { label: "Environment", icon: Satellite, image: Environment },
+  { label: "AI & Analytics", icon: TrendingUp, image: AIAnalytics },
 ];
 
 const process = [

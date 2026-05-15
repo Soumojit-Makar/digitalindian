@@ -1,18 +1,90 @@
 import { Helmet } from 'react-helmet-async'
 import { Building2, Tractor, Leaf, Zap, Truck, MapPin, Shield, Globe, Mountain, CheckCircle } from 'lucide-react'
 import { PageHero, CTABanner } from '../components/ui/index.jsx'
-
+// Institution logos
+import GOV from "../assates/Government.png";
+import EnterpriseIT from "../assates/EnterpriseIT.png"; 
+import UrbanPlanning from "../assates/Urban-Planning.png";
+import Infrastructure from "../assates/Infrastructure.png";
+import Utilities from "../assates/Utilities.png";
+import Logistics from "../assates/Logistics.png";
+import LandProperty from "../assates/Land-Property.png";
+import Agriculture from "../assates/Agriculture.png";
+import Environment from "../assates/Environment.png";
+import AIAnalytics from "../assates/AI-Analytics.png";
+import DisasterManagement from "../assates/Disaster-Management.png";
+import Mining from "../assates/Mining-Natural-Resources.png";
 const industries = [
-  { icon: Building2, title: 'Urban Planning & Smart City', useCases: ['Master Plan GIS', 'Zoning & Land Use', 'Infrastructure Inventory', 'Citizen Portals', 'Traffic Analysis'], desc: 'Data-driven master planning, zoning management, and smart city decision support.',image: "https://cdn-icons-png.flaticon.com/512/190/190411.png"},
-  { icon: Zap, title: 'Engineering & Construction', useCases: ['Site Selection', 'Corridor Planning', 'Progress Monitoring', 'BIM-GIS Integration', 'Environmental GIS'], desc: 'Site suitability, corridor analysis, and construction progress monitoring.',image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { icon: Tractor, title: 'Agriculture', useCases: ['Crop Health Monitoring', 'Yield Prediction', 'Soil Analysis', 'Flood Risk', 'Subsidy Verification'], desc: 'Satellite-powered crop monitoring and yield prediction.',image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { icon: Leaf, title: 'Environment', useCases: ['Deforestation Tracking', 'Watershed GIS', 'Biodiversity Mapping', 'Pollution Monitoring', 'Carbon GIS'], desc: 'Deforestation tracking, watershed analysis, and environmental impact assessment.',image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { icon: Zap, title: 'Utilities & Energy', useCases: ['Network Digitization', 'Asset Management', 'Fault Analysis', 'Renewable Planning', 'Demand Forecasting'], desc: 'Precision GIS for electricity, water, gas, and telecom networks.',image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { icon: Truck, title: 'Transportation', useCases: ['Road Surveys', 'Transit GIS', 'Freight Analysis', 'Accident Mapping', 'Port & Rail GIS'], desc: 'Route optimization, road condition assessment, and transit GIS.',image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { icon: MapPin, title: 'Land & Property', useCases: ['Cadastral Digitization', 'Land Records', 'Property Valuation', 'Encroachment Detection', 'Land Acquisition'], desc: 'Land records modernization, cadastral mapping, and property valuation.',image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { icon: Shield, title: 'Disaster Management', useCases: ['Risk Zone Mapping', 'Emergency Response', 'Flood Modeling', 'Damage Assessment', 'Evacuation Routes'], desc: 'Risk mapping, emergency response GIS, and post-disaster damage assessment.',image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { icon: Globe, title: 'Government & Public Sector', useCases: ['Scheme Monitoring', 'Public Asset GIS', 'Panchayat GIS', 'Census Analysis', 'Policy Mapping'], desc: 'Citizen services, public infrastructure GIS, and scheme monitoring.',image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
-  { icon: Mountain, title: 'Mining & Natural Resources', useCases: ['Concession Mapping', 'Exploration GIS', 'Environmental Compliance', 'Overburden Analysis', 'Reclamation Tracking'], desc: 'Concession mapping, exploration support, and environmental compliance.',image: "https://cdn-icons-png.flaticon.com/512/190/190411.png" },
+  { 
+    icon: Building2, 
+    title: 'Urban Planning & Smart City', 
+    useCases: ['Master Plan GIS', 'Zoning & Land Use', 'Infrastructure Inventory', 'Citizen Portals', 'Traffic Analysis'], 
+    desc: 'Data-driven master planning, zoning management, and smart city decision support.',
+    image: UrbanPlanning
+  },
+  {
+    icon: Zap, 
+    title: 'Engineering & Construction', 
+    useCases: ['Site Selection', 'Corridor Planning', 'Progress Monitoring', 'BIM-GIS Integration', 'Environmental GIS'],
+    desc: 'Site suitability, corridor analysis, and construction progress monitoring.',
+    image: Infrastructure 
+  },
+  { 
+    icon: Tractor, 
+    title: 'Agriculture', 
+    useCases: ['Crop Health Monitoring', 'Yield Prediction', 'Soil Analysis', 'Flood Risk', 'Subsidy Verification'], 
+    desc: 'Satellite-powered crop monitoring and yield prediction.',
+    image: Agriculture
+  },
+  { 
+    icon: Leaf, 
+    title: 'Environment', 
+    useCases: ['Deforestation Tracking', 'Watershed GIS', 'Biodiversity Mapping', 'Pollution Monitoring', 'Carbon GIS'], 
+    desc: 'Deforestation tracking, watershed analysis, and environmental impact assessment.',
+    image: Environment
+  },
+  { 
+    icon: Zap, 
+    title: 'Utilities & Energy', 
+    useCases: ['Network Digitization', 'Asset Management', 'Fault Analysis', 'Renewable Planning', 'Demand Forecasting'], 
+    desc: 'Precision GIS for electricity, water, gas, and telecom networks.',
+    image: Utilities
+  },
+  { 
+    icon: Truck, 
+    title: 'Transportation', 
+    useCases: ['Road Surveys', 'Transit GIS', 'Freight Analysis', 'Accident Mapping', 'Port & Rail GIS'], 
+    desc: 'Route optimization, road condition assessment, and transit GIS.',
+    image: Logistics
+  },
+  { 
+    icon: MapPin, 
+    title: 'Land & Property', 
+    useCases: ['Cadastral Digitization', 'Land Records', 'Property Valuation', 'Encroachment Detection', 'Land Acquisition'], 
+    desc: 'Land records modernization, cadastral mapping, and property valuation.',
+    image: LandProperty
+  },
+  { 
+    icon: Shield, 
+    title: 'Disaster Management', 
+    useCases: ['Risk Zone Mapping', 'Emergency Response', 'Flood Modeling', 'Damage Assessment', 'Evacuation Routes'], 
+    desc: 'Risk mapping, emergency response GIS, and post-disaster damage assessment.',
+    image: DisasterManagement
+  },
+  { 
+    icon: Globe, 
+    title: 'Government & Public Sector', 
+    useCases: ['Scheme Monitoring', 'Public Asset GIS', 'Panchayat GIS', 'Census Analysis', 'Policy Mapping'], 
+    desc: 'Citizen services, public infrastructure GIS, and scheme monitoring.',
+    image: GOV
+  },
+  { 
+    icon: Mountain, 
+    title: 'Mining & Natural Resources', 
+    useCases: ['Concession Mapping', 'Exploration GIS', 'Environmental Compliance', 'Overburden Analysis', 'Reclamation Tracking'], 
+    desc: 'Concession mapping, exploration support, and environmental compliance.',
+    image: Mining
+  },
 ]
 
 export default function IndustriesPage() {
