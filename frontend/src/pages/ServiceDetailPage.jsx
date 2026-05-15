@@ -42,7 +42,7 @@ export default function ServiceDetailPage() {
         label="Our Services"
         title={service.title}
         subtitle={service.summary}
-        img={service.icon}   // ✅ using service.icon here
+        // img={service.icon}   // ✅ using service.icon here
         breadcrumb={[
           { label: 'Home', to: '/' },
           { label: 'Services', to: '/services' },
@@ -62,11 +62,6 @@ export default function ServiceDetailPage() {
               />
               <div className="absolute inset-0 bg-black/20"></div>
 
-              <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-2xl md:text-3xl font-bold">
-                  {service.title}
-                </h3>
-              </div>
             </div>
           </div>
         </section>
